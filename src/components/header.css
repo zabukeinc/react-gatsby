@@ -1,0 +1,51 @@
+.Header {
+  position: fixed;
+  width: 100%;
+  padding: 50px 0;
+  z-index: 100;
+}
+
+.HeaderGroup {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+.Header a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.Header button {
+  padding: 5px 20px;
+  font-size: 20px;
+  border: none;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s cubic-bezier(0.2, 0.1, 0.2, 1);
+}
+
+.Header button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background: white;
+  transform: translateY(-3px);
+}
+
+@media only screen and (max-width: 640px) {
+  .Header {
+    padding: 15px 0;
+  }
+
+  .HeaderGroup {
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .Header a:nth-child(4) {
+    display: none;
+  }
+}
